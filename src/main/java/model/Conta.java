@@ -51,6 +51,9 @@ public class Conta {
                 "\nEmail: " + this.pessoa.getEmail() +
                 "\nRG: " + this.pessoa.getRG() +
                 "\nCEP: " + this.pessoa.getCEP() +
+                "\nEndereço:" + this.pessoa.getEndereco() +
+                "\nBairro:"+ this.pessoa.getBairro() +
+                "\nEstado:"+ this.pessoa.getEstado() +
                 "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
                 "\n";
     }

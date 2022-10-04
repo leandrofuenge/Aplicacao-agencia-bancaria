@@ -16,6 +16,11 @@ public class AgenciaBancaria {
     private static final String Email = null;
     private static final String RG = null;
     private static final String CEP = null;
+    private static final String Endereco = null;
+    private static final String Bairro = null;
+    private static final String Cidade = null;
+    private static final String Estado = null;
+
     static Scanner input = new Scanner(System.in);
     static ArrayList<Conta> contasBancarias;
 
@@ -72,15 +77,19 @@ public class AgenciaBancaria {
     public static void criarConta() {
         // System.out.println("Você está criando uma conta\n");
 
-        Pessoa pessoa = new Pessoa();
+        Pessoa pessoa = new Pessoa(null, null, null, null, null, null, null, null, null);
 
         pessoa.setNome(JOptionPane.showInputDialog("Nome:"));
         pessoa.setEmail(JOptionPane.showInputDialog("Email:"));
         pessoa.setcpf(JOptionPane.showInputDialog("CPF:"));
         pessoa.setRG(JOptionPane.showInputDialog("RG:"));
         pessoa.setCEP(JOptionPane.showInputDialog("CEP:"));
+        pessoa.setEndereco(JOptionPane.showInputDialog("Endereço:"));
+        pessoa.setBairro(JOptionPane.showInputDialog("Bairro:"));
+        pessoa.setCidade(JOptionPane.showInputDialog("Cidade:"));
+        pessoa.setEstado(JOptionPane.showInputDialog("Estado:"));
 
-        Pessoa cliente = new Pessoa(Nome, CPF, Email, RG, CEP);
+        Pessoa cliente = new Pessoa(Nome, CPF, Email, RG, CEP, Endereco, Bairro, Cidade, Estado);
 
         Conta conta = new Conta(cliente);
 
